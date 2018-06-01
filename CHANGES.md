@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-06-01 - Minor changes to CSS file due to core changes.
 * 2018-06-01 - Check compatibility for Moodle 3.5, no functionality change.
 
 ### v3.4-r4

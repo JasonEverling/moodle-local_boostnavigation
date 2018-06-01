@@ -54,11 +54,19 @@
     cursor: pointer;
 }
 
+/* Hide media-left div for collapsible heading nodes. */
+.jsenabled .list-group-item[data-key="mycourses"][data-isexpandable="1"] .media-left,
+.jsenabled .list-group-item[data-key="localboostnavigationcoursesections"][data-isexpandable="1"] .media-left,
+.jsenabled .list-group-item[data-key="localboostnavigationactivities"][data-isexpandable="1"] .media-left,
+.jsenabled .list-group-item[data-key^="localboostnavigationcustom"][data-isexpandable="1"] .media-left {
+    display: none;
+}
+
 /* Add activity nodes feature */
 /* Add an indent to the activity nodes because this isn't possible with Navigation node API.
    Setting !important is necessary because otherwise the child nodes' m-l-0 class would overrule our margin. */
-/* TODO: Remove when MDL-61298 is integrated to Moodle core. */
-.list-group-item[data-key^="localboostnavigationactivity"] > div {
+.list-group-item[data-key^="localboostnavigationactivity"] > div,
+.list-group-item[data-parent-key^="localboostnavigationcoursesections"] > div {
     margin-left: 1rem !important;
 }
 
